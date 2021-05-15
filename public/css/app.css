@@ -1,1 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: transparent;
+}
 
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #212322;
+  position: relative;
+}
+
+.navBar {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage .all-movies {
+  display: flex;
+  overflow-x: auto;
+}
+.homepage .movie {
+  padding: 20px;
+}
+.homepage .movie-poster {
+  height: 600px;
+  margin-bottom: 40px;
+}
+.homepage .movie-poster img {
+  height: 100%;
+}
+.homepage h1 {
+  color: #cecece;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.homepage a {
+  color: #cecece;
+  text-decoration: none;
+}
+.homepage a .movie-title {
+  text-align: center;
+}
+
+.show-movie {
+  width: 80%;
+  margin: auto;
+  color: #cecece;
+}
+.show-movie .movieInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin: 40px 0;
+}
+.show-movie .movieInfo .movieposter {
+  height: 500px;
+  margin-left: 40px;
+}
+.show-movie .movieInfo .movieposter img {
+  height: 100%;
+}
+.show-movie .backhome {
+  position: absolute;
+  top: 30px;
+  font-size: 25px;
+  text-decoration: none;
+  color: #212322;
+  transition: all 0.2s;
+}
+.show-movie .backhome:hover {
+  color: #cecece;
+}

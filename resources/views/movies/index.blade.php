@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="">
-      <title>titti i film</title>
-   </head>
-   <body>
-      <h1>TUTTI I FILM</h1>
+      {{-- importo la struttura --}}
+      @extends('movies.layouts.main')
+
+      {{-- imposto il titolo della pagina --}}
+      @section('pageTitle')
+      HOME-PAGE
+      @endsection
       
-         @foreach ($movies as $movie)
-         <a href="{{route('movies.show', ['movie' => $movie->id ]) }}">
-            <div>
-               <img src="{{$movie->cover}}" alt="">
-            </div>
-            <div class="title">
-               <h2>{{$movie->title}}</h2>
-            </div>
-         </a>
-         @endforeach
+      {{-- imposto il contenuto della pagina --}}
+      @section('content')
       
-   </body>
-</html>
+      <div class="homepage">
+         <h1>TUTTI I FILM</h1>
+         <div v-dragscroll  class='all-movies'>
+            @foreach ($movies as $movie)
+            <a class="movie" href="{{route('movies.show', ['movie' => $movie->id ])}}">
+               <div class='movie-poster'>
+                  <img src="{{$movie->cover}}" alt="">
+               </div>
+               <div class="movie-title">
+                  <h2>{{$movie->title}}</h2>
+               </div>
+            </a>
+            @endforeach
+        </div>
+      </div>
+      @endsection
+        
+      
+   

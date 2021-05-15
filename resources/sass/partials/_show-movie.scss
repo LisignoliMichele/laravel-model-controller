@@ -1,0 +1,29 @@
+.show-movie{
+   width: 80%;
+   margin: auto;
+   color: $mainTitles;
+   .movieInfo{
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      margin: 40px 0;
+      .movieposter{
+         height: 500px;
+         margin-left: 40px;
+         img{
+            height: 100%;
+         }
+      }
+   }
+   .backhome{
+      position: absolute;
+      top: 30px;
+      font-size: 25px;
+      text-decoration: none;
+      color: $mainBg;
+      transition: all 0.2s;
+      &:hover{
+         color: $mainTitles;
+      }
+   }
+}

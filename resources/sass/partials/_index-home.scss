@@ -1,0 +1,29 @@
+.homepage{
+   .all-movies{
+      display: flex;
+      overflow-x: auto;
+   }
+   .movie{
+      padding: 20px;
+   }
+   .movie-poster{
+      height: 600px;
+      margin-bottom: 40px;
+      img{
+         height: 100%;
+      }
+   }
+   h1{
+      color: $mainTitles;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 40px;
+   }
+   a{
+      color: $mainTitles;
+      text-decoration: none;
+      .movie-title{
+         text-align: center;
+      }
+   }
+}

@@ -1,0 +1,13 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   &:focus{
+      outline: transparent;
+   }
+}
+body{
+   font-family: 'Open Sans', sans-serif;
+   background-color: $mainBg;
+   position: relative;
+}

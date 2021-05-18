@@ -9,8 +9,12 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #212322;
   position: relative;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
 }
 
 .navBar {
@@ -21,32 +25,31 @@ body {
   justify-content: center;
 }
 
-.homepage .all-movies {
-  display: flex;
-  overflow-x: auto;
-}
-.homepage .movie {
-  padding: 20px;
-}
-.homepage .movie-poster {
-  height: 600px;
-  margin-bottom: 40px;
-}
-.homepage .movie-poster img {
-  height: 100%;
-}
 .homepage h1 {
-  color: #cecece;
-  text-align: center;
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.homepage a {
-  color: #cecece;
-  text-decoration: none;
+.homepage .moviesTable {
+  width: 100%;
+  border-collapse: collapse;
 }
-.homepage a .movie-title {
-  text-align: center;
+.homepage .moviesTable .movie_title {
+  width: 35%;
+}
+.homepage .moviesTable th {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 30px 10px;
+}
+.homepage .moviesTable td {
+  text-align: left;
+  padding: 10px;
+}
+.homepage .movie:nth-child(even) {
+  background-color: #cecece;
+}
+.homepage .movie .actions {
+  display: flex;
 }
 
 .show-movie {
@@ -58,6 +61,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+  text-align: right;
   margin: 40px 0;
 }
 .show-movie .movieInfo .movieposter {

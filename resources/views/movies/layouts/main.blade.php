@@ -20,7 +20,5 @@
          {{-- aggiunto lo yeld(come placeholder) del contenuto della struttura --}}
          @yield('content')
       </main>
-      <script src="https://unpkg.com/vue"></script>
-      <script src="https://unpkg.com/vue-dragscroll"></script>
    </body>
 </html>

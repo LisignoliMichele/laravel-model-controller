@@ -1,29 +1,31 @@
 .homepage{
-   .all-movies{
-      display: flex;
-      overflow-x: auto;
-   }
-   .movie{
-      padding: 20px;
-   }
-   .movie-poster{
-      height: 600px;
-      margin-bottom: 40px;
-      img{
-         height: 100%;
-      }
-   }
    h1{
-      color: $mainTitles;
-      text-align: center;
       margin-top: 50px;
       margin-bottom: 40px;
    }
-   a{
-      color: $mainTitles;
-      text-decoration: none;
-      .movie-title{
-         text-align: center;
+   .moviesTable{
+    width: 100%;
+    border-collapse: collapse;
+    .movie_title{
+       width: 35%;
+    }
+    th{
+      text-transform: uppercase;
+      text-align: left;
+      padding: 30px 10px;
+    }
+    td{
+       text-align: left;
+       padding: 10px;
+
+    }
+   }
+   .movie{  
+      &:nth-child(even){
+         background-color: #cecece;
+      }
+      .actions{
+         display: flex;
       }
    }
 }

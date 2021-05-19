@@ -30,7 +30,7 @@
        <div class="form-group">
          <label for="Trama" class="col-sm-2 control-label">TRAMA</label>
          <div class="col-sm-10">
-            <textarea name="plot" id="Trama" cols="30" rows="10" class="form-control" placeholder="Trama"></textarea value="{{$movie->plot}}">
+            <textarea name="plot" id="Trama" cols="30" rows="10" class="form-control" placeholder="Trama">{{$movie->plot}}</textarea>
          </div>
        </div>
        <div class="form-group">

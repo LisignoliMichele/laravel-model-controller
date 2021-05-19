@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Movie;
+
 class MovieController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+        return view('movies_admin.index');
     }
 
     /**
@@ -23,7 +25,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies_admin.create');
     }
 
     /**
@@ -34,7 +36,9 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Movie::create($request->all());
+
+        return redirect()->route('movies.index');
     }
 
     /**

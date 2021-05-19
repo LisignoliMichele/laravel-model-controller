@@ -28,6 +28,7 @@
                 <td>{{$movie->year}}
                 <td>
                     <a href="{{route('movies.show', ['movie' => $movie->id ])}}"><button type="button" class="btn btn-info">Visualizza</button></a>
+                    <a href="{{route('movies.edit', ['movie' => $movie->id ])}}"><button type="button" class="btn btn-info">Modifica</button></a>
                 </td>
             </tr>
             @endforeach

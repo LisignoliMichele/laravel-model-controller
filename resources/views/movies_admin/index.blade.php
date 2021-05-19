@@ -16,6 +16,7 @@
                 <th>REGISTA</th>
                 <th>GENERI</th>
                 <th>ANNO</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,7 +25,10 @@
                 <td>{{$movie->title}}</td>
                 <td>{{$movie->movie_director}}</td>
                 <td>{{$movie->genres}}</td>
-                <td>{{$movie->year}}</td>
+                <td>{{$movie->year}}
+                <td>
+                    <a href="{{route('movies.show', ['movie' => $movie->id ])}}"><button type="button" class="btn btn-info">Visualizza</button></a>
+                </td>
             </tr>
             @endforeach
         </tbody>

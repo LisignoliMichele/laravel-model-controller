@@ -6,13 +6,22 @@
 
 @section('content')
 <div class="container">
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+  @endif
    <form action="{{route('movies.store')}}" method="POST" class="form-horizontal">
       @method('POST')
 		@csrf
       <div class="form-group">
         <label for="Titolo" class="col-sm-2 control-label">TITOLO</label>
         <div class="col-sm-10">
-          <input name="title" type="text" class="form-control" id="Titolo" placeholder="Titolo del film">
+          <input name="title" type="text" class="form-control" id="Titolo" placeholder="Titolo del film" value="{{old('title')}}"">
         </div>
       </div>
       <div class="form-group">

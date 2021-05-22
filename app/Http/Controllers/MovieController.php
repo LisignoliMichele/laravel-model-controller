@@ -38,8 +38,21 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
+        // validations
+        $year = date("Y") + 1;
+        $rules =[
+            'title' => 'required|string|max:50',
+            'movie_director' => 'required|string|max:50',
+            'genres' => 'required|string|max:50',
+            'plot' => 'required|string',
+            'year' => 'required|numeric|min:1900|max:' .$year
+        ];
+        $request->validate($rules);
+
+        // insert sql
         Movie::create($request->all());
 
+        // return
         return redirect()->route('movies.index');
     }
 
